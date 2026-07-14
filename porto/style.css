@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    color: #171717;
+}
+
+header {
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: .7rem 1rem;
+    border-radius: 3rem;
+    background: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    opacity: .8;
+}
+
+.btn-header {
+    padding: .6rem 1.2rem;
+    border: none;
+    border-radius: 999px;
+    background: white;
+    color: #171717;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-header:hover {
+    background: #171717;
+    color: white;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+        url("./assets/hero-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 5%;
+}
+
+.hero-content p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .4rem 1rem;
+    border: 1px solid white;
+    border-radius: 999px;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    max-width: 650px;
+}
+
+.hero-content h3 {
+    margin-top: 1rem;
+    max-width: 550px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-top: 2rem;
+    padding: .5rem;
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: 999px;
+}
+
+.search-btn input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    padding-left: .8rem;
+    font-size: .95rem;
+}
+
+.search {
+    padding: .8rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    background: #171717;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.search:hover {
+    opacity: .9;
+}
+
+.travel-container {
+    padding: 6rem 5%;
+}
+
+.travel-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.travel-container p {
+    text-align: center;
+    margin-top: .7rem;
+    color: #666;
+}
+
+.travel-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.box {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.box h1 {
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.box p {
+    margin: 0 1rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-box button {
+    padding: .8rem 5rem;
+    border: none;
+    border-radius: 999px;
+    background: #171717;
+    color: #fff;
+    font-family: inherit;
+    font-size: .95rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-box button:hover {
+    background: #333;
+}
+
+.btn-box i {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #f2f2f2;
+    color: #171717;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-box i:hover {
+    background: #171717;
+    color: white;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 992px) {
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .travel-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    header {
+        width: 95%;
+        top: 1rem;
+        padding: .8rem 1rem;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .hero {
+        background-attachment: scroll;
+    }
+
+    .hero-container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h3 {
+        font-size: .95rem;
+    }
+
+    .search-btn {
+        max-width: 100%;
+    }
+
+    .travel-container {
+        padding: 4rem 1.5rem;
+    }
+
+    .travel-box {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .box img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo a {
+        font-size: 1.1rem;
+    }
+
+    .btn-header {
+        padding: .5rem 1rem;
+        font-size: .8rem;
+    }
+
+    .hero-content p {
+        font-size: .8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h3 {
+        font-size: .9rem;
+    }
+
+    .search-btn {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 1rem;
+    }
+
+    .search-btn input {
+        width: 100%;
+        padding: .8rem;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .travel-container h1 {
+        font-size: 2rem;
+    }
+
+    .travel-container p {
+        font-size: .9rem;
+    }
+
+    .box h1 {
+        font-size: 1.3rem;
+    }
+}
